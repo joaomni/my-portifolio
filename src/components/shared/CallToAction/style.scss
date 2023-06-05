@@ -1,0 +1,56 @@
+@import '../../../style-config/variable.scss';
+@import '../../../style-config/mixins.scss';
+
+.call-to-action {
+    height: 47px;
+    width: fit-content;
+    padding: 0 15px;
+    background: $white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black-light;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 2px 15px 15px #0f4cb4;
+    transition: all 0.5s ease-in-out;
+    @include typography(18px, 400, 1);
+    &:hover {
+        &::before {
+            transform: translateX(0);
+        }
+        .icon {
+            box-shadow: 1px 1px 3px 3px #fff;
+        }
+    }
+    .text,
+    .icon,
+    .arrow-icon {
+        position: relative;
+        z-index: 2;
+    }
+    .icon {
+        width: 21px;
+        height: 21px;
+        background-color: $yellow;
+        border-radius: 41px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $yellow;
+        z-index: 0;
+        transform: translateX(-100%);
+        transition: all 0.5s ease-in-out;
+    }
+}

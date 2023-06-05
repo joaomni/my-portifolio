@@ -1,0 +1,18 @@
+@import '../../../style-config/variable.scss';
+@import '../../../style-config/mixins.scss';
+
+.arrow-icon {
+    width: 26px;
+    height: 26px;
+    background: #bdd2f7;
+    border-radius: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: all 0.4s ease-in-out;
+    svg {
+        transform: rotate(-45deg);
+        color: #4081f2;
+    }
+}
